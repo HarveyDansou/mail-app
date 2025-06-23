@@ -33,8 +33,8 @@ export async function POST(request: NextRequest) {
     const formData = await request.json();
 
     const { data } = await resend.emails.send({
-      from: "noreply@harveydansou.com",
-      to: "contact@harveydansou.com",
+      from: "contact@harveydansou.com",
+      to: "hairvey.dansou@gmail.com",
       subject: "Portfolio Message",
       html: `<div><p>From: ${formData.firstname} <strong>${formData.lastname}</strong></p><p>Email: ${formData.email}</p><p>Phone: ${formData.phone}</p> <br/> <p>${formData.message}</p></div>`,
     });
